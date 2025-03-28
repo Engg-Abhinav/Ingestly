@@ -1,0 +1,50 @@
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f6f8;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.input-form {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result-display {
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}

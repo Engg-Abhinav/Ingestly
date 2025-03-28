@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Favicon and manifest -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Mobile viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Theme and description -->
+    <meta name="theme-color" content="#007BFF" />
+    <meta
+      name="description"
+      content="Interactive Web Content Q&A Tool: Scrape web content and get intelligent answers instantly."
+    />
+    
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    
+    <!-- Title -->
+    <title>Interactive Web Content Q&A Tool</title>
+    
+    <!-- Google Fonts for a modern look -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Custom inline styles for a beautiful, interactive feel -->
+    <style>
+      /* Apply a smooth, modern background gradient */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(135deg, #e0f7fa, #80deea);
+        color: #333;
+      }
+      /* Ensure the root container fills the viewport and centers content */
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- The React app will be injected into this div -->
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+/* index.css - Global Styles for an Interactive & Beautiful Q&A Tool */
+
+/* Define global CSS variables */
+:root {
+  --primary-color: #007BFF;
+  --secondary-color: #0056b3;
+  --background-color: #f4f6f8;
+  --text-color: #333;
+  --error-color: #ff4d4d;
+  --font-family: 'Arial', sans-serif;
+  --border-radius: 5px;
+  --transition-speed: 0.3s;
+}
+
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global body styling */
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+/* Link styling */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Container utility class */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Input and textarea styling */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* Error messages */
+.error {
+  color: var(--error-color);
+  font-weight: bold;
+  margin-top: 10px;
+}
