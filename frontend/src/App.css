@@ -1,50 +1,63 @@
 .App {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background-color: #f4f6f8;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
-h1 {
-  color: #333;
+.input-form, .result-display {
+  background-color: rgba(4, 249, 53, 0.133);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  margin-top: 20px;
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
-.input-form {
-  margin: 20px auto;
-  width: 80%;
-  max-width: 800px;
-}
-
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-.result-display {
-  margin-top: 30px;
-  font-size: 18px;
+.result-display p {
+  white-space: pre-wrap;
   text-align: left;
+  color: #ffebc1; /* Warm text color */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.9); /* ✅ clearly added shadow */
+}
+
+.result-display h3 {
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
 .error-message {
-  color: red;
-  font-weight: bold;
+  color: #ff6666;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.ingestion-complete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ingestion-complete span {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.input-form button {
+  margin-bottom: 20px;
+}
+
+.input-form textarea, 
+.input-form input {
+  color: #ffebc1; /* Warm text color */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* ✅ clearly added shadow */
+}
+
+.input-form textarea::placeholder, 
+.input-form input::placeholder {
+  color: #ddd; 
+  text-shadow: none; /* keep placeholder subtle */
 }

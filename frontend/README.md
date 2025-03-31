@@ -4,6 +4,7 @@ To activate Virtual environment
 - cd ..
 - cd frontend
 - npm install
+- npm audit fix --force
 - npm run build
 - cd ..
 - cd backend
