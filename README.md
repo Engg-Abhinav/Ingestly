@@ -1,4 +1,4 @@
-# Web Content Q&A Tool
+# Ingestly
 
 This project allows users to input URLs, scrape content from those URLs, and ask questions based on that content.
 
