@@ -16,28 +16,32 @@ client = genai.Client(api_key=GEMINI_API_KEY)
 model_name = "gemini-2.0-flash"  # Use the appropriate model per your Vertex AI setup
 types = genai.types
 
+# Commenting this part because we are deploying frontend and backend separately on render
 # Compute absolute path for the React build folder
-build_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../frontend/build'))
-print("Build folder (React build):", build_dir)
+# build_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../frontend/build'))
+# print("Build folder (React build):", build_dir)
 
-app = Flask(__name__, static_folder=None)  # We'll serve static files manually
+# Commenting this part because we are deploying frontend and backend separately on render
+# app = Flask(__name__, static_folder=None)  # We'll serve static files manually
+app = Flask(__name__)
 
-@app.route('/')
-def serve_react_app():
-    index_path = os.path.join(build_dir, 'index.html')
-    if not os.path.exists(index_path):
-        print("index.html not found at:", index_path)
-        abort(404)
-    return send_from_directory(build_dir, 'index.html', mimetype='text/html')
+# Commenting this part because we are deploying frontend and backend separately on render
+# @app.route('/')
+# def serve_react_app():
+#     index_path = os.path.join(build_dir, 'index.html')
+#     if not os.path.exists(index_path):
+#         print("index.html not found at:", index_path)
+#         abort(404)
+#     return send_from_directory(build_dir, 'index.html', mimetype='text/html')
 
-@app.route('/static/<path:filename>')
-def serve_static(filename):
-    static_dir = os.path.join(build_dir, 'static')
-    file_path = os.path.join(static_dir, filename)
-    if not os.path.exists(file_path):
-        print("Static file not found:", file_path)
-        abort(404)
-    return send_from_directory(static_dir, filename)
+# @app.route('/static/<path:filename>')
+# def serve_static(filename):
+#     static_dir = os.path.join(build_dir, 'static')
+#     file_path = os.path.join(static_dir, filename)
+#     if not os.path.exists(file_path):
+#         print("Static file not found:", file_path)
+#         abort(404)
+#     return send_from_directory(static_dir, filename)
 
 @app.route('/ingest', methods=['POST'])
 def ingest_content_endpoint():
