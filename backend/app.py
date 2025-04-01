@@ -34,11 +34,6 @@ app = Flask(__name__)
 #         abort(404)
 #     return send_from_directory(build_dir, 'index.html', mimetype='text/html')
 
-# For render only
-@app.route('/', methods=['GET', 'HEAD'])
-def health_check():
-    return '', 200
-
 # @app.route('/static/<path:filename>')
 # def serve_static(filename):
 #     static_dir = os.path.join(build_dir, 'static')
