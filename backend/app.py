@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request, jsonify, send_from_directory, abort
 from dotenv import load_dotenv
-from scraper import scrape_content
+from backend.scraper import scrape_content
 import google.genai as genai
 
 # Load environment variables from .env file
