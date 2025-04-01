@@ -34,6 +34,11 @@ app = Flask(__name__)
 #         abort(404)
 #     return send_from_directory(build_dir, 'index.html', mimetype='text/html')
 
+# For render only
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "ok"})
+
 # @app.route('/static/<path:filename>')
 # def serve_static(filename):
 #     static_dir = os.path.join(build_dir, 'static')
@@ -79,7 +84,3 @@ def generate_answer(content, question):
 # Commenting this part because we are deploying frontend and backend separately on render
 # if __name__ == '__main__':
 #     app.run(debug=True)
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 10000))
-    app.run(host='0.0.0.0', port=port)
