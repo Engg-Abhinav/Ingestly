@@ -35,9 +35,9 @@ app = Flask(__name__)
 #     return send_from_directory(build_dir, 'index.html', mimetype='text/html')
 
 # For render only
-@app.route('/health', methods=['GET'])
+@app.route('/', methods=['GET', 'HEAD'])
 def health_check():
-    return jsonify({"status": "ok"})
+    return '', 200
 
 # @app.route('/static/<path:filename>')
 # def serve_static(filename):
