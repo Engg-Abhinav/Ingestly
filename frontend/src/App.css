@@ -5,27 +5,31 @@
   text-align: center;
 }
 
-.input-form, .result-display {
+.input-form,
+.result-display {
   background-color: rgba(4, 249, 53, 0.133);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
 .result-display p {
   white-space: pre-wrap;
   text-align: left;
   color: #ffebc1; /* Warm text color */
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.9); /* ✅ clearly added shadow */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9); /* ✅ clearly added shadow */
 }
 
 .result-display h3 {
   color: #ffffff;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .error-message {
@@ -50,14 +54,24 @@
   margin-bottom: 20px;
 }
 
-.input-form textarea, 
+.input-form textarea,
 .input-form input {
   color: #ffebc1; /* Warm text color */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8); /* ✅ clearly added shadow */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* ✅ clearly added shadow */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.07);
+  resize: vertical;
 }
 
-.input-form textarea::placeholder, 
+.input-form textarea::placeholder,
 .input-form input::placeholder {
-  color: #ddd; 
+  color: #ddd;
   text-shadow: none; /* keep placeholder subtle */
 }
